@@ -20,11 +20,4 @@ int main(){
     printf("\n%d",n);
     printf("\n%d",n%=50);
     printf("\n%d",n);
-    printf("\n 12+76");
 }
-// #include
-// void main(){
-// char n;
-// n = getchar();
-// putchar(n);
-// } 
