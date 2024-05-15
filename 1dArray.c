@@ -62,40 +62,48 @@ Dy.mem allocation:
 
 // dynamic memory allocation
 
-#include<stdio.h>
-#include<stdlib.h>
+// #include<stdio.h>
+// #include<stdlib.h>
 
-int main(){
-    int sum = 0;
-    // create a dy.mem
-    printf("%d\n",sizeof(int));
-    // allocate the head memoery 
-    int* a= (int*) malloc(5*sizeof(int));
+// int main(){
+//     int sum = 0;
+//     // create a dy.mem
+//     printf("%d\n",sizeof(int));
+//     // allocate the head memoery 
+//     int* a= (int*) malloc(5*sizeof(int));
 
-    for(int i=0;i<=5;i++){
-        // scanf("%d",&a[i]);// ---> index mem.addr
-        scanf("%d",a+i);// ---> index mem.addr (another methord)
-    }
-    for(int i=0;i<=5;i++){
-        printf("\n%d ",a[i]);
-        printf("\n%p ",&a[i]);
-        printf("\n%p ",a+i);
-        sum+=a[i];
-    }
-    printf("\n%d ",a[0]);
-    printf("\n%d",sum);
+//     for(int i=0;i<=5;i++){
+//         // scanf("%d",&a[i]);// ---> index mem.addr
+//         scanf("%d",a+i);// ---> index mem.addr (another methord)
+//     }
+//     for(int i=0;i<=5;i++){
+//         printf("\n%d ",a[i]);
+//         printf("\n%p ",&a[i]);
+//         printf("\n%p ",a+i);
+//         sum+=a[i];
+//     }
+//     printf("\n%d ",a[0]);
+//     printf("\n%d",sum);
 
-}
+// }
 
 // // array and function
 
-// #include<stdio.h>
-// int main(){
-//     char arr[3];
-//     for (int i=0;i<3;i++){
-//         scanf("%c",&arr[i]);
-//     }
-//     for (int i=0;i<3;i++){
-//         printf("%c",arr[i]);
-//     }
-// }
+#include<stdio.h>
+int ar(int a[]){
+    for (int i=0; i<3; i++){
+        printf("%d ",*a+i);
+        // printf("%p",a[]);
+    }
+}
+int main(){
+    int arr[3]={1 ,2 ,3};
+    int arrc[]=arr;
+    ar(arrc);
+    // for (int i=0;i<3;i++){
+    //     scanf("%c",&arr[i]);
+    // }
+    // for (int i=0;i<3;i++){
+    //     printf("%c",arr[i]);
+    // }
+}

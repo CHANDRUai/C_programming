@@ -70,17 +70,43 @@
 // satic
 
 #include<stdio.h>
-int* fun(){
-    static int a ;
-    a = 20;
-    printf("\n%p",a);
-    printf("\n%p",&a);
-    // printf("\n%d",*a);
-    return &a;
-}
+// int* fun(){
+//     static int a ;
+//     a = 20;
+//     printf("\n%p",a);
+//     printf("\n%p",&a);
+//     // printf("\n%d",*a);
+//     return &a;
+// }
+// int main(){
+//     // int a= 10;
+//     int* b= fun();
+//     printf("%p",b);
+//     printf("\n%d",*b);
+// }
+// int main(){
+//     // char * a ="hoo";
+//     int d =10;
+//     printf("%d",*(&d));//op: h
+//     return 0;
+// }
+
+// #include<stdio.h>
+// int main(){
+//  int i = 10;
+//  void *p = &i;
+//  printf("%f\n", *(float *)p);
+//  return 0;
+// } 
+
+// string
+
+#include<stdio.h>
+
 int main(){
-    // int a= 10;
-    int* b= fun();
-    printf("%p",b);
-    printf("\n%d",*b);
+    char * name= "chandru is lost the last interview";
+    printf("%d ",sizeof(name));
+    // for(int i=0; i<35; i++){
+    //     printf("%c ",*(name+i));
+    // }
 }

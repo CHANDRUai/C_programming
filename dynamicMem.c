@@ -62,10 +62,14 @@ int * a = (int *) calloc(n,sizeof(int)); ---> syntex
 //     return 0;
 // }
 
+//2D and function
+
+// matrix muktiplication
 
 #include<stdio.h>
 #include<stdlib.h>
 
+int mult(int **, int **, int r1 ,int c1,int r2, int c2);
 int main(){
     int r1=3,c1=3;
     int r2=3, c2=3;
@@ -104,4 +108,21 @@ int main(){
             printf("%d ",*(*(b+i)+j));
         }
     }
+
+    mult(a,b,r1,c1,r1,c2);
+}
+int mult(int **a, int **b, int r1 ,int c1,int r2, int c2){
+    int sum;
+    printf("\nmaltipled matrix:\n");
+    for (int i= 0; i<r2;i++){
+        for (int j= 0; j<c2; j++){
+            sum=0;
+            for (int k =0; k<c1; k++){
+                sum+= *(*(a+i)+k) * *(*(b+k)+j);
+            }
+            printf("%d ",sum);
+        }
+        printf("\n");
+    }
+    return 0;
 }

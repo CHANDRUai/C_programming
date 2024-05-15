@@ -158,6 +158,36 @@ int main(void)
 ### +  cannot use keywords as identifiers
 ### + A special identifier called a statement label can be used in goto statements
 
+## 3. Constants
+- variables with fixed values
+- values can not be modified in the program once they are defined\
+- it maybe any of the data types
+
+``` const int c_var = 20; and const int* const ptr = &c_var;```
+
+## 4.Special Symbols
+
+- ``` Brackets[] ``` as array element references , indicate single and multidimensional subscripts
+
+- ```Parentheses()``` function calls and function parameters
+
+- ```Braces{}``` start and end of a block of code containing more than one executable statement
+
+- ```Comma (, )``` separate more than one statement like for separating parameters in function calls
+
+- ```Colon(:)``` essentially invokes something called an initialization list
+- ```Semicolon(;)``` statement terminator - end of one logical entity
+
+- ```Asterisk (*)``` create a pointer variable and for the multiplication of variables
+
+- ```Assignment operator(=)```assign values and for logical operation validation
+
+- ```Pre-processor (#)```  macro processor that is used automatically by the compiler to transform your program before actual compilation
+
+- ```Period (.)``` access members of a structure or union
+
+- ```Tilde(~)``` Bitwise One’s Complement Operator
+
 ## 6. Operators
 
 ### + unary operators(1)
@@ -460,7 +490,23 @@ ex: int * a = (int*) malloc(10)
 - realloc
 - free
 
+## 2D array
+### creating a 2D array dynamically
+```c
+*arr = (int *)malloc(r * c * sizeof(int)); 
+```
 
+```c 
+int *arr[r];
+    for (i=0; i<r; i++)
+        arr[i] = (int *)malloc(c * sizeof(int));
+``` 
+
+``` c
+int **arr = (int **)malloc(r * sizeof(int *));
+for (i=0; i<r; i++)
+   arr[i] = (int *)malloc(c * sizeof(int));
+```
 > # strings
 
 ## datatype
@@ -469,9 +515,14 @@ ex: int * a = (int*) malloc(10)
 ### unformatted
 ## String array
 ## Built in functions
+
+- string.h (strlen(), strcmp(), strcat()...)
+- ctype.h ( toupper(),tolower()...)
 ## String and Functions
 
 > # Recursion
+
+- call it's copy
 
 ## Purpose
 ### - Resuability
@@ -480,5 +531,14 @@ ex: int * a = (int*) malloc(10)
 - Recursion
 
 ## Prerequistics
+- Discrete math ``` ex: f(n)=f(n-1)+f(n-2) ```
 ## Problems solved using recursion
-### - Divide and conquer
+- Divede and conquer
+- Backtracking
+- Branch and Bound
+
+## Working 
+- base condition 
+- recursive function
+``` if (n==1) : return else:(n-1)```
+
